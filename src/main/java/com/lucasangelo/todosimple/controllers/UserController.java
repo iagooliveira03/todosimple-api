@@ -30,7 +30,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/(id)")
+    @GetMapping("/{id}")
     public ResponseEntity<User> findById(@PathVariable long id) {
         User obj = this.userService.findById(id);
         return ResponseEntity.ok().body(obj);
